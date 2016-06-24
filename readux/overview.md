@@ -10,4 +10,6 @@ At this early stage, the approach has been to create "proxy" or "virtual" object
 
 ## Installation
 
-See the [deploy documentation](https://github.com/WSULib/docs/readux/deploy.md) for installation instructions.
+See the [deploy documentation](https://github.com/WSULib/docs/tree/master/readux/deploy.md) for installation instructions.
+
+![modeling sketch](https://github.com/WSULib/docs/blob/master/readux/img/readux_object_mapping_small.jpg)
