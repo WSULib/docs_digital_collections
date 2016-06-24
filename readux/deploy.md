@@ -11,20 +11,55 @@ Though our instance of Readux will likely be installed with the vagrant build, h
 git clone https://github.com/WSULib/readux.git
 ```
 
-#### Install
+
+#### Prepare Solr
+* create `readux` core using [INSERT LINK HERE]
+
+
+#### Ingest supporting fedora objects
+* ingest Emory control objects from [INSERT LINK HERE]
+
+
+
+#### Install Readux
+(also see [Emory's deploy notes](http://readux.readthedocs.io/en/develop/deploynotes.html))
+* Use pre-configured `localsettings.py`, or update `localsettings.py.dist` in `/opt/readux/readux`
+
 * navigate to repo
+
 * use ouroboros virtual environment (**important!**)
 ```
 workon ouroboros
 ```
-* install module
+
+* Requires some prerequisites.
 ```
+pip install fabric
+fab build
+```
+
+* Database prep
+```
+python manage.py syncdb
+python manage.py migrate
+```
+
+* clone and install WSUDOR fork / copy of Emory 'eultheme' for theming
+```
+git clone https://github.com/WSULib/wsudor_django_theme
+cd wsudor_django_theme
 python setup.py install
 ```
 
-
 #### Configure
-* Use pre-configured `localsettings.py`, or update `localsettings.py.dist`
+* create superuser
+```
+python manage.py createsuperuser
+```
+
+* Setup site domain:
+"Use Django admin interface to configure the site domain name (used to generate absolute urls to full-text content for use with Voyant)""
+    * under "Sites" in the admin
 
 
 #### Create proxy Readux objects from WSUDOR objects
