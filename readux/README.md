@@ -1,6 +1,6 @@
 # Overview
 
-Readux is an application from Emory University for reading, annotating, and interacting with digitized texts.
+[Readux](https://github.com/emory-libraries/readux) is an application from Emory University for reading, annotating, and interacting with digitized texts.
 
 We have worked with them to extend Readux to work with texts digitized here at Wayne State.
 
