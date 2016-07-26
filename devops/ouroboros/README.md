@@ -35,5 +35,5 @@ Ouroboros content types are central to WSUDOR.  The provide details for ingest f
 
 [More information about Ouroboros Content Types](content_types/README.md)
 
-## :pizza: ToDo
+## :tomato: ToDo
 * discuss Eulfedora
