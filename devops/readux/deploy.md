@@ -3,25 +3,43 @@
 Though our instance of Readux will likely be installed with the vagrant build, here are instructions to inform that process and/or fixes to install.
 
 
+## PreReqs
+Hopefully these are covered with vagrant build, but worth noting here as well.
+
+Requires Ruby and Ruby-Dev 2.x:
+
+```
+sudo apt-get -y install python-software-properties
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
+sudo apt-get -y update
+sudo apt-get -y install ruby2.2 ruby-switch
+sudo ruby-switch --set ruby2.2
+sudo apt-get -y install ruby2.2-dev
+```
+
+And the `teifacsimile_to_jekyll` gem from Emory:
+
+```
+sudo gem install /vagrant/downloads/teifacsimile_to_jekyll-0.6.0.gem
+```
+
+
 ## Instructions
 
 
-#### Clone WSUDOR fork of Readux:
+#### 1) Clone WSUDOR fork of Readux and use `wsu` branch:
 ```
 git clone https://github.com/WSULib/readux.git
+cd readux
+git checkout wsu
 ```
 
 
-#### Prepare Solr
+#### 2) Prepare Solr
 * create `readux` core using [INSERT LINK HERE]
 
 
-#### Ingest supporting fedora objects
-* ingest Emory control objects from [INSERT LINK HERE]
-
-
-
-#### Install Readux
+#### 3) Install Readux
 (also see [Emory's deploy notes](http://readux.readthedocs.io/en/develop/deploynotes.html))
 * Use pre-configured `localsettings.py`, or update `localsettings.py.dist` in `/opt/readux/readux`
 
@@ -46,12 +64,15 @@ python manage.py migrate
 
 * clone and install WSUDOR fork / copy of Emory 'eultheme' for theming
 ```
+# install WSUDOR fork / copy of Emory's eultheme for local editing
+cd /opt
 git clone https://github.com/WSULib/wsudor_django_theme
 cd wsudor_django_theme
-python setup.py install
+# install from github
+pip install -e git://github.com/WSUlib/wsudor_django_theme.git#egg=eultheme
 ```
 
-#### Configure
+#### 4) Configure
 * create superuser
 ```
 python manage.py createsuperuser
@@ -65,8 +86,8 @@ python manage.py createsuperuser
 #### Create proxy Readux objects from WSUDOR objects
 Creating proxy Readux proxy objects relies on methods built-in to WSUDOR objects.
 
-* `createReaduxVirtualObjects` - creates proxy objects
-* `regenReaduxVirtualObjects` - purges and recreates proxy objects
+* `.createReaduxVirtualObjects()` - creates proxy objects
+* `.regenReaduxVirtualObjects()` - purges and recreates proxy objects
 
 It is worth noting that all proxy objects contain `_Readux_Virtual` as part of the PID, and will ultimately terminate with something like `Volume`, `Book`, or `Page`.
 
@@ -94,9 +115,3 @@ where `-u` forces update.
 ```
 python manage.py runserver HOST:PORT
 ```
-
-
-
-
-
-
