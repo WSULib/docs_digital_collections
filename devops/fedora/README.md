@@ -22,4 +22,15 @@ Fedora is installed at `/opt/fedora`.
 ### Configuring Fedora
 Most of our Fedora-level configurations are done in the with the `fedora.fcfg` file at `/opt/fedora/server/config/fedora.fcfg`.
 
+Our changes / modifications are minimal, but we have a couple.
+
+#### XACML
+One are we have changed the default settings are for XACML policies.  Fedora Commons installs without enforcing XACML policies with the value, `permit-all-requests` in the `fedora.fcfg` file.  We enforce XACML policies by setting that value to, `enforce-policies`.  You can find that here in the `fedora.fcfg` file:
+
+
+
 ### Starting / Restarting / Stopping
+Starting, stopping and restarting Fedora is done through Tomcat, `sudo service tomcat7 start|restart|stop`.  You can also _reload_ Fedora from the Tomcat manager GUI.
+
+## :tomato:ToDo
+* Finish modifications / configurations
