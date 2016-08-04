@@ -1,7 +1,7 @@
 devops
 ====
 
-This area includes documentation for systems and software essential to the operation of the digital collections infrastructure.  This includes things like Fedora Commons, Solr, our python middleware Ouroboros, and others.
+This area includes documentation for systems and software essential to the operation of the digital collections infrastructure.  This includes things like [Fedora Commons](fedora/), [Solr](solr/), our python middleware [Ouroboros](ouroboros/), [vagranted-based virtual machines](virtual_machines/) used for development and deployment, among others.
 
 The focus is highly technical:
 * how do things start / stop?
