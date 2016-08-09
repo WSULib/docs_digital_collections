@@ -15,11 +15,12 @@ ProxyPassReverse /place http://localhost:PORT/WHEREVER
 ```
 
 ## Location Directives
+Location directives are rules tied to each URL path. Each comes with specific rules about things such as who is allowed, what is allowed (for example, passing through certain headers), etc.
 
+## Loris
+Loris, our IIIF image server, is controlled in part through Apache. The virtual host contains references to a wsgi app, user permissions, and logging. It also has a specific set of rules in the location directive. See [loris](../loris) for more information.
 
-### Loris
-
-### SSL Settings
+## SSL Settings
 As of July 2016, we employ a variety of SSL settings to harden our Apache webserver configuration.
 - OCSP stapling
 - Disabling old SSL Protocols
@@ -29,7 +30,3 @@ As of July 2016, we employ a variety of SSL settings to harden our Apache webser
 - Enabling HSTS
 
 As of July 2016, this gives the server an A+ rating on ssllabs.com. See ssl vhost in /etc/apache for information on how these settings are enabled.
-
-:tomato:
-- location Directives
-- Loris
