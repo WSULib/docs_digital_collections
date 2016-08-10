@@ -30,5 +30,5 @@ There is no way currently to rollback changes. Due the minimalist approach of bu
 
 ## Troubleshooting
 
-## :tomato:To-do
+## :tomato:ToDo
 * Troubleshooting section

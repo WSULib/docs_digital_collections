@@ -5,6 +5,6 @@ There are multiple considerations when deploying a version of the digital collec
 ### The specifics
 See the [virtual machines section](virtual_machines/README.md) for more detail on the specifics of deployment in both production and development.
 
-:tomato: To-do
+:tomato: ToDo
 
 Add additional detail
