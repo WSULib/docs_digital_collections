@@ -1,7 +1,18 @@
-WSU Library System Documentation
+![VMC cover art](https://digital.library.wayne.edu/loris/fedora:wayne:collectionvmc%7CPREVIEW/full/full/0/default.jpg)
+
+digital collections documentation
 ====
 
-This repository is home to Wayne State University Library System project and infrastructure documentation.  
+Digital Collections homepage:
+[https://digital.library.wayne.edu/digitalcollections/](https://digital.library.wayne.edu/digitalcollections/)
 
-### Why the :tomato:?
-Sustainable documentation for digital infrastructure is often one of the most overlooked and under-appreciated steps in the process.  It began as shorthand for a `ToDo` list: tomatoes look somewhat like bullet points for a list, and they have the added attribute of, when rotten, being thrown at deserving parties.  It was felt this imagery was in-line with our desire to push ourselves to document more.  Write documentation, avoid a tomato.
+This documentation pertains to the library's digital collections infrastructure.  It is broken into a few major sections:
+* [assets](assets/)
+ * includes models, images, documents, and other assets for documentation
+* [devops](devops/)
+ * concerned with the deployment and operation of the digital collections infrastructure
+* [humanops](humanops/)
+ * focused on outreach, policies, and other non-technical aspects of the digital collections
+* [misc](misc/)
+ * because you always need one of these
+
