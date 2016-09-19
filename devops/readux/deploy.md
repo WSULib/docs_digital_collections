@@ -69,7 +69,13 @@ cd /opt
 git clone https://github.com/WSULib/wsudor_django_theme
 cd wsudor_django_theme
 # install from github
-pip install -e git://github.com/WSUlib/wsudor_django_theme.git#egg=eultheme
+pip install --upgrade .
+```
+
+* collect static files in Readux app
+```
+cd /opt/readux
+python manage.py collectstatic
 ```
 
 #### 4) Configure
