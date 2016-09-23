@@ -2,6 +2,8 @@
 
 Though our instance of Readux will likely be installed with the vagrant build, here are instructions to inform that process and/or fixes to install.
 
+If Readux _is_ built with Vagrant, you can probably skip to step #4.
+
 
 ## PreReqs
 Hopefully these are covered with vagrant build, but worth noting here as well.
@@ -31,12 +33,12 @@ sudo gem install /vagrant/downloads/teifacsimile_to_jekyll-0.6.0.gem
 ```
 git clone https://github.com/WSULib/readux.git
 cd readux
-git checkout wsu
+git checkout wsu_deploy
 ```
 
 
-#### 2) Prepare Solr
-* create `readux` core using [INSERT LINK HERE]
+#### 2) Prepare `readux` Solr core
+* update: this is covered automatically with solr deployment
 
 
 #### 3) Install Readux
@@ -119,5 +121,9 @@ where `-u` forces update.
 
 #### Start Server
 ```
+# with manage.py
 python manage.py runserver HOST:PORT
+
+# with apache (preferred)
+sudo service apache2 restart
 ```
