@@ -12,4 +12,8 @@ At this early stage, the approach has been to create "proxy" or "virtual" object
 
 See the [deploy documentation](deploy.md) for installation instructions.
 
+## Troubleshooting
+
+See the [troubleshooting documentation](troubleshooting.md) for troubleshooting help.
+
 ![modeling sketch](img/readux_object_mapping_small.jpg)
