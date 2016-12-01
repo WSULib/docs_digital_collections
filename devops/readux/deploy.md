@@ -87,9 +87,9 @@ python manage.py createsuperuser
 ```
 
 * Setup site domain:
-"Use Django admin interface to configure the site domain name (used to generate absolute urls to full-text content for use with Voyant)""
-    * under "Sites" in the admin
-
+Use Django admin interface to configure the site domain name (used to generate absolute urls to full-text content for use with Voyant)
+ * navigate to `http://HOST/readux/admin`
+ * under "Sites" in the admin console, change `example.com` to whatever the app host is (e.g. `192.168.42.5`, `digital.library.wayne.edu`, etc.)
 
 #### Create proxy Readux objects from WSUDOR objects
 Creating proxy Readux proxy objects relies on methods built-in to WSUDOR objects.
