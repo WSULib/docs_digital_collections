@@ -16,7 +16,9 @@ The API is the primary link between the backend and the front-end.  The front-en
 
 ### Manager (`WSUDOR_Manager`)
 
-Referred to as "WSUDOR Manager", or often just "Ouroboros" for short, the Manager component of Ouroboros is where things are "done" in a practical sense.  WSUDOR Manager is a flask app that provides a GUI for performing just about any repository work that is not performed on the command line.  WSUDOR Manager has user login, is availble to multiple people (usually limited by IP), performs long, complex background jobs, and much more.  
+Referred to as "WSUDOR Manager", or often just "Ouroboros" for short, the Manager component of Ouroboros is where things are "done" in a practical sense.
+
+WSUDOR Manager is a flask app that provides a GUI for performing just about any repository work that is not performed on the command line.  WSUDOR Manager uses LDAP for login (via the digital collections login form), is availble to multiple people (limited by hand-created user accounts by admins), performs long, complex background jobs, and much more.  
 
 [More information about WSUDOR Manager](manager/README.md)
 

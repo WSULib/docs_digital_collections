@@ -2,6 +2,8 @@
 
 Though our instance of Readux will likely be installed with the vagrant build, here are instructions to inform that process and/or fixes to install.
 
+If Readux _is_ built with Vagrant, you can probably skip to step #4.
+
 
 ## PreReqs
 Hopefully these are covered with vagrant build, but worth noting here as well.
@@ -35,8 +37,8 @@ git checkout wsu_deploy
 ```
 
 
-#### 2) Prepare Solr
-* create `readux` core using [INSERT LINK HERE]
+#### 2) Prepare `readux` Solr core
+* update: this is covered automatically with solr deployment
 
 
 #### 3) Install Readux
@@ -69,7 +71,13 @@ cd /opt
 git clone https://github.com/WSULib/wsudor_django_theme
 cd wsudor_django_theme
 # install from github
-pip install -e git://github.com/WSUlib/wsudor_django_theme.git#egg=eultheme
+pip install --upgrade .
+```
+
+* collect static files in Readux app
+```
+cd /opt/readux
+python manage.py collectstatic
 ```
 
 #### 4) Configure
@@ -79,17 +87,14 @@ python manage.py createsuperuser
 ```
 
 * Setup site domain:
-"Use Django admin interface to configure the site domain name (used to generate absolute urls to full-text content for use with Voyant, and IIIF
-server URL patterns)""
-    * navigate to admin @ `/admin`
-    * select "Sites" and add host information here
-
+Use Django admin interface to configure the site domain name (used to generate absolute urls to full-text content for use with Voyant)
+ * navigate to `http://HOST/readux/admin`
+ * under "Sites" in the admin console, change `example.com` to whatever the app host is (e.g. `192.168.42.5`, `digital.library.wayne.edu`, etc.)
 
 * Collect static files
 ```
 python manage.py collectstatic
 ```
-
 
 #### Create proxy Readux objects from WSUDOR objects
 Creating proxy Readux proxy objects relies on methods built-in to WSUDOR objects.
@@ -121,5 +126,9 @@ where `-u` forces update.
 
 #### Start Server
 ```
+# with manage.py
 python manage.py runserver HOST:PORT
+
+# with apache (preferred)
+sudo service apache2 restart
 ```
