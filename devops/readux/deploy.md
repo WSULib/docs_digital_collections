@@ -31,7 +31,7 @@ sudo gem install /vagrant/downloads/teifacsimile_to_jekyll-0.6.0.gem
 ```
 git clone https://github.com/WSULib/readux.git
 cd readux
-git checkout wsu
+git checkout wsu_deploy
 ```
 
 
@@ -79,8 +79,16 @@ python manage.py createsuperuser
 ```
 
 * Setup site domain:
-"Use Django admin interface to configure the site domain name (used to generate absolute urls to full-text content for use with Voyant)""
-    * under "Sites" in the admin
+"Use Django admin interface to configure the site domain name (used to generate absolute urls to full-text content for use with Voyant, and IIIF
+server URL patterns)""
+    * navigate to admin @ `/admin`
+    * select "Sites" and add host information here
+
+
+* Collect static files
+```
+python manage.py collectstatic
+```
 
 
 #### Create proxy Readux objects from WSUDOR objects
