@@ -10,7 +10,7 @@ Ouroboros is structured in three main areas, all of which run under a single [Tw
 
 ### API (`WSUDOR_API`)
 
-The API is the primary link between the backend and the front-end.  The front-end queries Fedora Commons and Solr through this custom API via ajax calls.  The API is a flask app running under Twisted at `/WSUAPI`.
+The API is the primary link between the backend and the front-end.  The front-end queries Fedora Commons and Solr through this custom API.  The API is a flask app running under Twisted at `/api`.
 
 [More information about the API](api/README.md)
 
