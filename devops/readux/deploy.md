@@ -2,7 +2,7 @@
 
 Though our instance of Readux will likely be installed with the vagrant build, here are instructions to inform that process and/or fixes to install.
 
-If Readux _is_ built with Vagrant, you can probably skip to step #4.
+If Readux _is_ built with Vagrant, **you can probably skip to step #4**.
 
 
 ## PreReqs
