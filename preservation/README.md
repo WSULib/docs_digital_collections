@@ -1,6 +1,6 @@
 # Preservation
 
-The Wayne State University Digital Collections has two main areas of focus: **Access** and **Preservation**.  Documentation in this section focuses on the latter, **preservation**.
+Documentation in this section focuses **preservation**.
 
 With multiple stakeholders, preservation of digital objects is a complex and ongoing process.  Digital objects are never "done" or "safe", but require sustained attention and migration.  Though infinitely more can be said about each, [this document](https://web-beta.archive.org/web/20161218195039/http://www.dpworkshop.org/dpm-eng/terminology/strategies.html) has a nice, succint range of activities that stewards of digital objects must consider as preservation activities.
 
