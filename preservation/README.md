@@ -8,4 +8,4 @@ This section of the documentation contains information and pointers to models, w
 
 ## Content Modeling
 
-A reasonable place to start is [Content Modeling](content_models).  Content modeling is central to digital preservation, as it underpins how digital objects in this particular repository are understood and shaped.
+A reasonable place to start is [Content Modeling](../content_models).  Content modeling is central to digital preservation, as it underpins how digital objects in this particular repository are understood and shaped.
