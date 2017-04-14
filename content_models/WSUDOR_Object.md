@@ -2,7 +2,7 @@
 
 ## Description
 
-This is the most basic Contnt Model.  It provides some methods and attributes that all WSUDOR Objects share, such as indexing, calculating object size, returning IIIF manifest (if it has one), etc.
+This is the most basic Contnt Model.  It provides methods and attributes that all WSUDOR Objects share, such as indexing, calculating object size, returning IIIF manifest (if it has one), etc.
 
 **All** objects are instantiated as a `WSUDOR_Object`, and then extend the appropriate the appropriate Content Model type.
 
@@ -46,7 +46,7 @@ As the base class, expectations for ingest are minimal but critical:
 
 ### Derivatives Datastreams
 
-As this class is meant to be extended for more specific Content Model types, it does not create an derivatives.
+As this class is meant to be extended for more specific Content Model types, it does not create derivatives.
 
 ### Creates Datastreams
 
