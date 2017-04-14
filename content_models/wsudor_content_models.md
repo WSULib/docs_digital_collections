@@ -151,7 +151,18 @@ Each Content Model expects input files and creates derivatives associated with i
 WSUDOR Content Models:
 
  * [WSUDOR_Object - Generic, base object](WSUDOR_Object.md)
+ * [WSUDOR_Image - Audio objects](WSUDOR_Audio.md)
+ * [WSUDOR_Image - Collection objects](WSUDOR_Collection.md)
+ * [WSUDOR_Image - Container objects](WSUDOR_Container.md)
+ * [WSUDOR_Image - Document objects](WSUDOR_Document.md)
+ * [WSUDOR_Image - Hierarchical Files objects](WSUDOR_HierarchicalFiles.md)
  * [WSUDOR_Image - Image objects](WSUDOR_Image.md)
+ * [WSUDOR_Image - Learning objects](WSUDOR_LearningObject.md)
+ * [WSUDOR_Image - Readux objects](WSUDOR_Readux.md)
+ * [WSUDOR_Image - Video objects](WSUDOR_Video.md)
+ * [WSUDOR_Image - Volume objects](WSUDOR_Volume.md)
+ * [WSUDOR_Image - eBook objects](WSUDOR_WSUebook.md)
+ * [WSUDOR_Image - eBook Page objects](WSUDOR_WSUebook_Page.md)
 
 
 
