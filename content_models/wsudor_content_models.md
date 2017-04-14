@@ -1,6 +1,6 @@
 # WSUDOR Content Models
 
-**Note:** WSUDOR Content Models are also referred to as "Content Types" in code and documentation; they are referring to the same thing described below.
+*Note: WSUDOR Content Models are also referred to as "Content Types" in code and documentation; both refer to the same thing described below.*
 
 WSUDOR content models are a bit of a hybrid between **intellectual items** and **fedora objects** ([read more about that distinction here](fedora_objects.md)).  WSUDOR Content Models are python files, python classes specifically, that Ouroboroes leverages to create objects, edit and manage them, and provide access through the API and front-end.
 
@@ -20,7 +20,102 @@ One goal of the WSUDOR Content Models is that you don't have to constantly remem
 
 ## Instantiating a Content Model
 
+An object is opened or created as a WSUDOR Content Model by using the base class, `WSUDOR_Object`.  For example, from the command line, an pre-existing object in Fedora can be opened as a WSUDOR Object like this:
 
+    obj = WSUDOR_ContentTypes.WSUDOR_Object('wayne:vmc14515')
+
+Running a `dir` of that python object reveals the WSUDOR methods available:
+
+    In [99]: dir(obj)
+    Out[99]: 
+    ['DC_Solr_flat',
+     'DC_XML',
+     'DC_dict',
+     'DCfromMODS',
+     'Fedora_ContentType',
+     'MODS_Solr_flat',
+     'MODS_XML',
+     'MODS_dict',
+     'RELS_EXT_Solr_flat',
+     'RELS_INT_Solr_flat',
+     'SolrDoc',
+     'SolrSearchDoc',     
+     '_checkJP2Codestream',
+     '_checkJP2Orientation',
+     '_checkJP2OrientationAndSize',
+     '_extract_with_pillow',
+     '_from_jp2',
+     '_imageOrientation',
+     '_removeDatastreamFromLorisCache',
+     '_removeObjFromLorisCache',
+     '_removeObjFromVarnishCache',
+     'add_to_indexer_queue',
+     'cacheInVarnish',
+     'calc_object_size',
+     'checkJP2',
+     'collectionMembers',
+     'constituents',
+     'content_type',
+     'description',
+     'enrichMODSFromMETS',
+     'finishIngest',
+     'fixJP2',
+     'genIIIFManifest',
+     'hasInternalParts',
+     'hasLearningObjects',
+     'hasMemberOf',
+     'iiif_factory',
+     'iiif_manifest',
+     'imageParts',
+     'index',
+     'indexToSolr',
+     'index_on_ingest',
+     'ingestBag',
+     'isMemberOfCollections',
+     'isSensitive',
+     'label',
+     'objMeta',
+     'object_hierarchy',
+     'object_size',
+     'object_type',
+     'ohandle',
+     'orig_payload',
+     'pid',
+     'pid_suffix',
+     'premis',
+     'previewImage',
+     'previewSolrDict',
+     'prune',
+     'public_api_additions',
+     'purge',
+     'rdf_triples',
+     'refresh',
+     'refresh_content_type',
+     'regenJP2',
+     'regenRDF',
+     'registerOAI',
+     'removeObjFromCache',
+     'reportProb',
+     'sendObject',
+     'struct_requirements',
+     'timeline',
+     'update_object_size',
+     'validIngestBag',
+     'version']
+
+WSUDOR Content Models are also used for creating brand new WSUDOR Objects for ingest, but pointing to a bagit file on disk and including the argument `object_type` when instantiating:
+
+    In [101]: obj = WSUDOR_ContentTypes.WSUDOR_Object('/home/ouroboros/ingest_jobs/ingest_job_1/ea9dcf9a-d8a9-42bc-84b7-8d4d31d064ae', object_type='bag')
+    object_type is bag, creating working dir at /tmp/Ouroboros/06c18cc0-9e7d-4c1c-aa0c-a5b1245e984f
+    directory detected, symlinking
+    payload is: /tmp/Ouroboros/06c18cc0-9e7d-4c1c-aa0c-a5b1245e984f
+    objMeta.json loaded for: wayne:fourthfolio / Tragedy of King Lear
+
+As this is a somewhat generic "bag" type object at this point, one of the few things you could do would be to ingest that object or "bag" with the following method:
+
+    obj.ingestBag()
+
+All of these methods are availalbe on the command line, or more commonly, are fired by actions and tasks in Ouroboros.
 
 ## Content Type Specific Models
 
