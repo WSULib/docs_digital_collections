@@ -1,4 +1,4 @@
-# `WSUDOR_########` - ######## objects
+# `WSUDOR_WSUebook_Page` - eBook Page objects
 
 ## Description
 

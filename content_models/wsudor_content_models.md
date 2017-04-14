@@ -144,7 +144,7 @@ Creating this `objMeta.json` is one of the trickier parts of preparing an intell
 
 Each Content Type -- e.g. Image, Audio, Document, etc. -- has its own WSUDOR Content Model.  These Content Type specific Models have their own markdown file in this directory with information specific to it.
 
-The basic structure for each is as follows:
+The basic documentation structure for each is as follows:
 
  * **Description** - short description of the content model
  * **Content Type Methods and Attributes** - methods and attributes *unique* to that content model, building on the base methods and attributes in `WSUDOR_Object`
