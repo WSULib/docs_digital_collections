@@ -103,7 +103,7 @@ Running a `dir` of that python object reveals the WSUDOR methods available:
      'validIngestBag',
      'version']
 
-WSUDOR Content Models are also used for creating brand new WSUDOR Objects for ingest, but pointing to a bagit file on disk and including the argument `object_type` when instantiating:
+WSUDOR Content Models are also used for creating brand new WSUDOR Objects for ingest by pointing to a bagit file on disk and including the argument `object_type='bag'` when instantiating:
 
     In [101]: obj = WSUDOR_ContentTypes.WSUDOR_Object('/home/ouroboros/ingest_jobs/ingest_job_1/ea9dcf9a-d8a9-42bc-84b7-8d4d31d064ae', object_type='bag')
     object_type is bag, creating working dir at /tmp/Ouroboros/06c18cc0-9e7d-4c1c-aa0c-a5b1245e984f
