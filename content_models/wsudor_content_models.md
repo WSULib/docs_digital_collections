@@ -20,7 +20,7 @@ One goal of the WSUDOR Content Models is that you don't have to constantly remem
 
 ## Instantiating a Content Model
 
-An object is opened or created as a WSUDOR Content Model by using the base class, `WSUDOR_Object`.  For example, from the command line, an pre-existing object in Fedora can be opened as a WSUDOR Object like this:
+An object is opened or created as a WSUDOR Content Model by using the base class, `WSUDOR_Object`.  For example, from the command line, any pre-existing object in Fedora can be opened as a WSUDOR Object like this:
 
     obj = WSUDOR_ContentTypes.WSUDOR_Object('wayne:vmc14515')
 
@@ -103,7 +103,17 @@ Running a `dir` of that python object reveals the WSUDOR methods available:
      'validIngestBag',
      'version']
 
-WSUDOR Content Models are also used for creating brand new WSUDOR Objects for ingest by pointing to a bagit file on disk and including the argument `object_type='bag'` when instantiating:
+When the object is instantiated, it's specific Content Model type is automatically determined, and the base `WSUDOR_Object` is extended with that class.  In the case of above, it was an image object and so extended with `WSUDOR_Image`.  You can check this:
+
+    In [112]: obj.content_type
+    Out[112]: 'WSUDOR_Image'
+
+To see the whole hierarchy of classes extended:
+
+    In [113]: print obj
+    <WSUDOR_ContentTypes.WSUDOR_Image.WSUDOR_Image object at 0x7f48e8770690>
+
+WSUDOR Content Models are *also* used for creating brand new WSUDOR Objects for ingest by pointing to a bagit file on disk and including the argument `object_type='bag'` when instantiating:
 
     In [101]: obj = WSUDOR_ContentTypes.WSUDOR_Object('/home/ouroboros/ingest_jobs/ingest_job_1/ea9dcf9a-d8a9-42bc-84b7-8d4d31d064ae', object_type='bag')
     object_type is bag, creating working dir at /tmp/Ouroboros/06c18cc0-9e7d-4c1c-aa0c-a5b1245e984f
@@ -121,7 +131,7 @@ All of these methods are availalbe on the command line, or more commonly, are fi
 
 Another important thing to note is the `objMeta.json` referenced above when instantiating a WSUDOR Object from a bagit file.  All bags destined for ingest must contain an `objMeta.json` file that contains information about how the bag is structured.  This includes what file should be used as the thumbnail (`isRepresentedBy`), what datastreams are included, and extremely important, what WSUDOR Content Model to use!  
 
-For example, after loading the bagit file above, you can check what kind of WSUDOR Content Model the `objMeta.json` stated the object was:
+For example, after loading the bagit file above, and similar to what we did with a pre-existing object we opened, you can check what kind of WSUDOR Content Model the `objMeta.json` stated the object was:
 
     In [110]: obj.content_type
     Out[110]: u'WSUDOR_WSUebook'
