@@ -37,20 +37,26 @@ As mentioned, `WSUDOR_Object` contains methods shared by all objects in the repo
  
 ## Ingest
 
-### Expects Files
+### Expected Files
 
 As the base class, expectations for ingest are minimal but critical:
 
  * `objMeta.json` - JSON file that states Content Model type, object structure, XACML policy, and other pertinent information
  * `MODS.xml` - MODS descriptive metadata
 
-### Derivatives Datastreams
+## Datastreams
+
+### Preserved
+
+As the base class, this content model does not have any original files to preserve.
+
+### Derivative
 
 As this class is meant to be extended for more specific Content Model types, it does not create derivatives.
 
-### Creates Datastreams
+### Other
 
-However, as the base Content Model type, it does create some essential datastreams on ingest:
+However, as the base Content Model type, it does create some essential datastreams on ingest for every object:
 
  * `POLICY` - XACML Fedora policy, pulling from `objMeta.json` file and pre-existing Fedora policy objects
  * `OBJMETA` - saves `objMeta.json` file as JSON datastream
@@ -58,8 +64,11 @@ However, as the base Content Model type, it does create some essential datastrea
  * `MODS` - creates datastream from `MODS.xml` file from bag
  * `BAGIT_META` - saves bagit file metadata as a tarball in datastream
  * `IIIF_MANIFEST` - if applicable, fires during `finishIngest` method
+ * `PREMIS` - begins PREMIS log for this object
 
 These datastreams become central for preservation, management, and access for the object.
+
+
 
 
 

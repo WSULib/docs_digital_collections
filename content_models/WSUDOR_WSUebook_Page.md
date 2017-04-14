@@ -1,13 +1,28 @@
-# `WSUDOR_Image` - Image objects
+# `WSUDOR_########` - ######## objects
 
 ## Description
 
+
+
 ## Content Type Methods and Attributes
+
+
 
 ## Ingest
 
-### Expects Files
+### Expected Files
 
-### Derivatives Datastreams
 
-### Creates Datastreams
+
+## Datastreams
+
+### Preserved
+
+
+
+### Derivative
+
+
+
+### Other
+

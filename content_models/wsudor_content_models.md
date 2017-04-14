@@ -2,7 +2,7 @@
 
 *Note: WSUDOR Content Models are also referred to as "Content Types" in code and documentation; both refer to the same thing described below.*
 
-WSUDOR content models are a bit of a hybrid between **intellectual items** and **fedora objects** ([read more about that distinction here](fedora_objects.md)).  WSUDOR Content Models are python files, python classes specifically, that Ouroboroes leverages to create objects, edit and manage them, and provide access through the API and front-end.
+WSUDOR Content Models (CMs) are a bit of a hybrid between **intellectual items** and **fedora objects** ([read more about that distinction here](fedora_objects.md)).  WSUDOR Content Models are python files, python classes specifically, that Ouroboroes leverages to create objects, edit and manage them, and provide access through the API and front-end.
 
 Similar to [Islandora's Solution Packs](https://wiki.duraspace.org/display/ISLANDORA711/Solution+Packs), [Hydra Content Models](https://wiki.duraspace.org/display/hydra/Hydra+objects%2C+content+models+(cModels)+and+disseminators), and the inspiration behind the [Portland Common Data Model (PCDM)](https://github.com/duraspace/pcdm/wiki), WSUDOR Content Models are "opinionated" models, imposed at the level of code to faciliate the programmatic creation, preservation, managment, and access of things in our repository.  They are critically important as they codify our preservation and access approaches and philosophies in human and machine readable formats.
 
@@ -143,6 +143,17 @@ Creating this `objMeta.json` is one of the trickier parts of preparing an intell
 ## Content Type Specific Models
 
 Each Content Type -- e.g. Image, Audio, Document, etc. -- has its own WSUDOR Content Model.  These Content Type specific Models have their own markdown file in this directory with information specific to it.
+
+The basic structure for each is as follows:
+
+ * **Description** - short description of the content model
+ * **Content Type Methods and Attributes** - methods and attributes *unique* to that content model, building on the base methods and attributes in `WSUDOR_Object`
+ * **Ingest** - notes about ingest and object structure
+   * **Expects Files** - files and structure expected for ingest, including 
+ * **Datastreams** - notes about datastreams created and managed
+   * **Preserved** - describes original, archival files, versioned in Fedora
+   * **Derivative** - outlines derivative files created from originals, these are *not* versioned in Fedora and considered expendable
+   * **Other** - other datastreams created, default to versioned in Fedora unless otherwise stated
 
 A good starting place might be the base object type, [`WSUDOR_Object`](WSUDOR_Object.md), the WSUDOR Content Model from which all others are derived from and extend.
 
