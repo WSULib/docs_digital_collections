@@ -117,11 +117,26 @@ As this is a somewhat generic "bag" type object at this point, one of the few th
 
 All of these methods are availalbe on the command line, or more commonly, are fired by actions and tasks in Ouroboros.
 
+## objMeta
+
+Another important thing to note is the `objMeta.json` referenced above when instantiating a WSUDOR Object from a bagit file.  All bags destined for ingest must contain an `objMeta.json` file that contains information about how the bag is structured.  This includes what file should be used as the thumbnail (`isRepresentedBy`), what datastreams are included, and extremely important, what WSUDOR Content Model to use!  
+
+For example, after loading the bagit file above, you can check what kind of WSUDOR Content Model the `objMeta.json` stated the object was:
+
+    In [110]: obj.content_type
+    Out[110]: u'WSUDOR_WSUebook'
+
+With that information, the base object type `WSUDOR_Object` knows to extend itself with the content model, `WSUDOR_WSUebook`.  
+
+Creating this `objMeta.json` is one of the trickier parts of preparing an intellectual item for ingest, and one of the most important.  Each WSUDOR Content Model requres an `objMeta.json` file included in the bagit file.  The `objMeta.json` file is usually prepared automatically in the bag creation step of the Ingest Workflow, but that is a bit out of scope here.  [You can read more about that process here](#).
+
 ## Content Type Specific Models
 
 Each Content Type -- e.g. Image, Audio, Document, etc. -- has its own WSUDOR Content Model.  These Content Type specific Models have their own markdown file in this directory with information specific to it.
 
-A good starting place is [`WSUDOR_Object`](WSUDOR_Object.md), the WSUDOR Content Model from which all others are derived from and extend.
+A good starting place might be the base object type, [`WSUDOR_Object`](WSUDOR_Object.md), the WSUDOR Content Model from which all others are derived from and extend.
+
+Each Content Model expects input files and creates derivatives associated with its content type.  For example `WSUDOR_Image` might expect some kind of original image file, TIFF, JPEG, PNG, etc., and always creates a derivative JPEG2000.  These expected inputs and derivatives are explained in the documentation for each Content Model type.
 
 WSUDOR Content Models:
 
