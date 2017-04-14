@@ -149,7 +149,7 @@ The basic structure for each is as follows:
  * **Description** - short description of the content model
  * **Content Type Methods and Attributes** - methods and attributes *unique* to that content model, building on the base methods and attributes in `WSUDOR_Object`
  * **Ingest** - notes about ingest and object structure
-   * **Expects Files** - files and structure expected for ingest, including 
+   * **Expected Files** - files and structure expected for ingest, including 
  * **Datastreams** - notes about datastreams created and managed
    * **Preserved** - describes original, archival files, versioned in Fedora
    * **Derivative** - outlines derivative files created from originals, these are *not* versioned in Fedora and considered expendable
@@ -157,9 +157,7 @@ The basic structure for each is as follows:
 
 A good starting place might be the base object type, [`WSUDOR_Object`](WSUDOR_Object.md), the WSUDOR Content Model from which all others are derived from and extend.
 
-Each Content Model expects input files and creates derivatives associated with its content type.  For example `WSUDOR_Image` might expect some kind of original image file, TIFF, JPEG, PNG, etc., and always creates a derivative JPEG2000.  These expected inputs and derivatives are explained in the documentation for each Content Model type.
-
-WSUDOR Content Models:
+### WSUDOR Content Models:
 
  * [WSUDOR_Object - Generic, base object](WSUDOR_Object.md)
  * [WSUDOR_Image - Audio objects](WSUDOR_Audio.md)
