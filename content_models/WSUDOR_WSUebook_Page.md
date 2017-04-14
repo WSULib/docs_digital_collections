@@ -50,3 +50,15 @@ In addition to the original files from digitization and the Abbyy OCR process, t
 
 Other than storing the original page assets, and creating derivatives for access, no other unique, preserved datastreams are created.
 
+### Examples Datastream List
+
+    {'ALTOXML': <eulfedora.xml.ObjectDatastream at 0x7f48e867f210>,
+     'DC': <eulfedora.xml.ObjectDatastream at 0x7f48e867f110>,
+     'HTML': <eulfedora.xml.ObjectDatastream at 0x7f48e867f1d0>,
+     'IIIF_ANNOLIST': <eulfedora.xml.ObjectDatastream at 0x7f48e867f290>,
+     'IMAGE': <eulfedora.xml.ObjectDatastream at 0x7f48e867f150>,
+     'JP2': <eulfedora.xml.ObjectDatastream at 0x7f48e867f190>,
+     'POLICY': <eulfedora.xml.ObjectDatastream at 0x7f48e867f0d0>,
+     'RELS-EXT': <eulfedora.xml.ObjectDatastream at 0x7f48e867f250>,
+     'THUMBNAIL': <eulfedora.xml.ObjectDatastream at 0x7f48e867f050>}
+

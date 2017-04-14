@@ -69,6 +69,3 @@ However, as the base Content Model type, it does create some essential datastrea
 These datastreams become central for preservation, management, and access for the object.
 
 
-
-
-

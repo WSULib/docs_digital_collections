@@ -48,3 +48,17 @@ However, while original files are not preserved here, or 1:1 derivatives, there 
  * `HTML_FULL` - fullbook, concatenated HTML from each page
  * `PDF_FULL` - fullbook_ concatenated PDF from each page
 
+### Examples Datastream List
+
+    {'BAGIT_META': <eulfedora.xml.ObjectDatastream at 0x7f48e878e390>,
+     'DC': <eulfedora.xml.ObjectDatastream at 0x7f48e878e9d0>,
+     'HTML_FULL': <eulfedora.xml.ObjectDatastream at 0x7f48e878e890>,
+     'IIIF_MANIFEST': <eulfedora.xml.ObjectDatastream at 0x7f48e878e990>,
+     'MODS': <eulfedora.xml.ObjectDatastream at 0x7f48e878e8d0>,
+     'OBJMETA': <eulfedora.xml.ObjectDatastream at 0x7f48e878e750>,
+     'PDF_FULL': <eulfedora.xml.ObjectDatastream at 0x7f48e878e850>,
+     'POLICY': <eulfedora.xml.ObjectDatastream at 0x7f48e878e7d0>,
+     'RELS-EXT': <eulfedora.xml.ObjectDatastream at 0x7f48e878e950>,
+     'RELS-INT': <eulfedora.xml.ObjectDatastream at 0x7f48e878e910>,
+     'THUMBNAIL': <eulfedora.xml.ObjectDatastream at 0x7f48e878e810>}
+

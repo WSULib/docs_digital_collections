@@ -42,3 +42,22 @@ Finally, the following are created based on the `isRepresentedBy` relationship:
 ### Other
 
 Other than image derivatives, no new datastreams are created by this content model.
+
+### Examples Datastream List
+
+    {'BAGIT_META': <eulfedora.xml.ObjectDatastream at 0x7f48e867fe50>,
+     'DC': <eulfedora.xml.ObjectDatastream at 0x7f48e8691090>,     
+     'IIIF_MANIFEST': <eulfedora.xml.ObjectDatastream at 0x7f48e867fe90>,
+     'MODS': <eulfedora.xml.ObjectDatastream at 0x7f48e867ffd0>,
+     'OBJMETA': <eulfedora.xml.ObjectDatastream at 0x7f48e867fb90>,
+     'POLICY': <eulfedora.xml.ObjectDatastream at 0x7f48e867fc90>,
+     'PREMIS': <eulfedora.xml.ObjectDatastream at 0x7f48e867ff50>,
+     'PREVIEW': <eulfedora.xml.ObjectDatastream at 0x7f48e867fe10>,
+     'RELS-EXT': <eulfedora.xml.ObjectDatastream at 0x7f48e867ff10>,
+     'RELS-INT': <eulfedora.xml.ObjectDatastream at 0x7f48e867fed0>,
+     'THUMBNAIL': <eulfedora.xml.ObjectDatastream at 0x7f48e867fdd0>,     
+     'vmc14515': <eulfedora.xml.ObjectDatastream at 0x7f48e867fcd0>,
+     'vmc14515_ACCESS': <eulfedora.xml.ObjectDatastream at 0x7f48e867fd10>,
+     'vmc14515_JP2': <eulfedora.xml.ObjectDatastream at 0x7f48e867fd90>,
+     'vmc14515_PREVIEW': <eulfedora.xml.ObjectDatastream at 0x7f48e867fd50>,
+     'vmc14515_THUMBNAIL': <eulfedora.xml.ObjectDatastream at 0x7f48e867f510>}
