@@ -1,4 +1,4 @@
-# WSUDOR_Image - Image objects
+# `WSUDOR_Image` - Image objects
 
 ## Description
 
