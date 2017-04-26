@@ -16,7 +16,7 @@ Or, there is an even more general WSUDOR Content Model, `WSUDOR_Object`, that al
 
 It's very easy to use the words "fedora object", "object", "item", "WSUDOR object", etc., interchangeably.  They do have specific meanings in the context of this repository, but it's common to use them somewhat interchangeably.  
 
-One goal of the WSUDOR Content Models is that you don't have to constantly remember be cognizant of the fact that an ebook is actually comprised of dozens, or hundreds, of discrete fedora objects.  It is sufficient to refer to refer to it as a single "object" or "item" when indexing, migrating, etc.  On the back-end, dozens or hundreds of objects are being updated, with 5-10 datastreams each, but the ebook *Sketches and Scraps*, is for all intents and purposes, "an object in the repository," and we refer to it as such.
+One goal of the WSUDOR Content Models is that you don't have to constantly remember to be cognizant that an ebook is actually comprised of dozens, or hundreds, of discrete fedora objects.  It is sufficient to refer to it as a single "object" or "item" when indexing, migrating, etc.  On the back-end, dozens or hundreds of objects are being updated, with 5-10 datastreams each, but the ebook *Sketches and Scraps* is, for all intents and purposes, "an object in the repository," and we refer to it as such.
 
 ## Instantiating a Content Model
 
