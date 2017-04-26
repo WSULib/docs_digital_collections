@@ -4,7 +4,7 @@ A Google search for `digital preservation "content model"` will bring up a world
 
 For the purposes of this documentation, a working definition for "content model" is proposed:
 
-> Content Models are opinionated blueprints for how abstract, intellectual items such as a photograph or a book is represented in digital files, particularly within a digital object repository.
+> Content Models are opinionated blueprints for how an abstract, intellectual item, such as a photograph or a book, is represented as digital files within a digital object repository to support preservation and access.
 
 ## What?
 
