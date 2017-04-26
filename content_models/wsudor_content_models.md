@@ -123,7 +123,7 @@ WSUDOR Content Models are *also* used for creating brand new WSUDOR Objects for 
 
 As this is a somewhat generic "bag" type object at this point, one of the few things you could do would be to ingest that object or "bag" with the following method:
 
-    obj.ingestBag()
+    obj.ingest()
 
 All of these methods are availalbe on the command line, or more commonly, are fired by actions and tasks in Ouroboros.
 
