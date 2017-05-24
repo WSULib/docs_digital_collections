@@ -11,7 +11,7 @@ Each VM follows essentiall the same vagrant / provisioning, but requires a bit o
 
 ## dataslice
 
-As `dataslice` is primarily just a spinning instance of Fedora for other VMs to utilize, the following can be flipped off or removed:
+The `dataslice` is primarily just a spinning instance of Fedora for other VMs to utilize, the following can be flipped off or removed:
 
   * Solr
   * Ouroboros
@@ -50,3 +50,16 @@ Build away!  These are unique builds, designed to have 100% functionality, with 
 # Troubleshooting / Notes
 
   * Remember: each VM may be connected to Fedora on `dataslice`, but it will need to index the objects locally.  This can be performed in Ouroboros (and may take some time).  
+
+# Removing Services
+
+## Fedora
+First stop the tomcat service `service tomcat7 stop` and then remove the fedora war file from `/var/lib/tomcat7/webapps`. Also delete the `fedora` directory inside webapps. Start tomcat back up with `service tomcat7 start`.
+
+
+## Ouroboros
+Remove `ouroboros.conf` from /etc/supervisor/conf.d. This is the configuration file that Supervisor uses to automatically start Ouroboros on boot. Next remove the folder `/opt/ouroboros` using a command such as `rm -r /opt/ouroboros`.
+
+
+## Solr
+First stop the tomcat service `service tomcat7 stop` and then remove the solr4 war file from `/var/lib/tomcat7/webapps`. Also delete the `solr4` directory inside webapps. Start tomcat back up with `service tomcat7 start`.
