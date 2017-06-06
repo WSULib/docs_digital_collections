@@ -99,13 +99,15 @@ python manage.py collectstatic
 * Point Readux at correct Fedora node
 Now that we're pointing instances at remote Fedora nodes, there is a place to update the `/opt/readux/readux/localSettings.py` file as well:
 
-    # Fedora Repository settings
-    FEDORA_ROOT = 'http://REMOTE_FEDORA_HOST/fedora/'
-    FEDORA_PIDSPACE = 'wayne'
-    # NOTE: should be configured with a limited access guest account
-    FEDORA_USER = 'FEDORA_PASSWORD'
-    FEDORA_PASSWORD = 'FEDORA_PASSWORD'
-    
+```
+# Fedora Repository settings
+FEDORA_ROOT = 'http://REMOTE_FEDORA_HOST/fedora/'
+FEDORA_PIDSPACE = 'wayne'
+# NOTE: should be configured with a limited access guest account
+FEDORA_USER = 'FEDORA_USERNAME'
+FEDORA_PASSWORD = 'FEDORA_PASSWORD'
+```
+
 This is still tricky.  It doesn't appear to need read/write access, but not fully tested yet.
 
 #### Create proxy Readux objects from WSUDOR objects
